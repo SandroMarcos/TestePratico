@@ -1,0 +1,16 @@
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\TestePratico.Dominio.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\TestePratico.Dominio.pdb
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\FluentNHibernate.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\Iesi.Collections.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\NHibernate.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\FluentNHibernate.pdb
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\FluentNHibernate.xml
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\Iesi.Collections.xml
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\NHibernate.xml
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\obj\Debug\TestePratico.Dominio.csprojResolveAssemblyReference.cache
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\obj\Debug\TestePratico.Dominio.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\obj\Debug\TestePratico.Dominio.pdb
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\TestePratico.Dominio.dll.config
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\System.Data.SQLite.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\Ninject.dll
+D:\Meus_documentos\Visual Studio 2010\Projects\TestePratico.Web\TestePratico.Dominio\bin\Debug\Ninject.xml

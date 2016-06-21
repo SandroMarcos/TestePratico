@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-2.2.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/angular.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/angular-resource.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/AngularApp/appController.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/AngularApp/Service.js")" type="text/javascript"></script>
+    @RenderSection("Scripts", false)    
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>My MVC Application</h1>
+            </div>
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { })</li>
+                    <li>@Html.ActionLink("Usuarios", "Index", "Usuario", new { area = "Cadastro" }, new { })</li>
+                    <li>@Html.ActionLink("Skills", "Index", "Skill", new { area = "Cadastro" }, new { })</li>
+                    <li>@Html.ActionLink("Associar Skills", "Index", "SkillsUsuarios", new { area = "Cadastro" }, new { })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { })</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>

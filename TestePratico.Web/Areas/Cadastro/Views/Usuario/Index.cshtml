@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "Cadastro de Usuários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastro de usuários</h2>
+    <br />
+    <script src="@Url.Content("~/Scripts/Cadastro/usuarioController.js")" type="text/javascript"></script>
+    <div ng-controller="usuarioCadastroCtrl" ng-init="obterTodos()">
+        <div  class="container">
+            <div class="center-table" style="width:910px">
+                <form name="frmusuario" class="form-horizontal">
+                <input type="hidden" name="Id" ng-model="model.Id" value="{{ model.Id }}" />                
+                <fieldset>
+                    <div class="form-group-md">                        
+                        <div class="col-md-2">
+                            <label for="nome" class="control-label" >
+                            Nome :</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" ng-model="model.Nome" class="form-control" required id="nome"
+                                value="{{ model.Nome }}" />
+                        </div>
+                        <div class="col-md-1">
+                            &nbsp;&nbsp;
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+                    <div class="form-group-md">    
+                        <div class="col-md-2">                    
+                            <label for="login" class="control-label" >
+                            Login :</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" ng-model="model.Login" class="form-control" required id="login"
+                                value="{{ model.Login }}" />
+                        </div>
+                        <div class="col-md-1">
+                            &nbsp;&nbsp;
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+                    <div class="form-group-md">  
+                        <div class="col-md-2">                                          
+                            <label for="senha" class="control-label" >
+                            Senha :</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="password" ng-model="model.Senha" class="form-control" required id="senha"
+                                value="{{ model.Senha }}" />
+                        </div>
+                        <div class="col-md-1">
+                            &nbsp;&nbsp;
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+                    <div class="form-group-md">       
+                        <div class="col-md-2">                                     
+                            <label for="administrador" class="control-label" >
+                            Administrador ? :</label>
+                        </div>
+                            
+                        <div class="col-md-1">
+                            <input type="checkbox" ng-model="model.Administrador" class="form-control" id="administrador"
+                                value="{{ model.Administrador }}" />
+                        </div>
+                        <div class="col-md-1">
+                            &nbsp;&nbsp;
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+                    <div class="form-group-md">    
+                        <div class="col-md-2">                                        
+                            <label for="senha" class="control-label" >
+                                Tipo Usuário :</label>
+                        </div>
+                            
+                        <div class="col-md-5">
+                            <select class="form-control" id="tipoUsuario" ng-model="model.TipoUsuario"
+                                required ng-options="tipo.Value*1 as tipo.Text for tipo in model.TiposUsuario">
+                            </select>                            
+                        </div>
+                    </div>
+                    <div class="form-group-md">
+                        <div class="col-md-3">
+                            &nbsp                            
+                        </div>
+                        <div class="col-md-9 col-md-offset-9">
+                            <input type="button" ng-disabled="frmusuario.$invalid" ng-click="salvar()" class="btn btn-primary buttom-Padrao"
+                                value="Salvar" />
+                            <input type="button" ng-click="novo()" class="btn btn-primary buttom-Padrao"
+                                value="Novo" />
+                            <input type="button" ng-click="excluir()" class="btn btn-primary buttom-Padrao" ng-disabled="isDisabled()"
+                                value="Excluir" />
+
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+            </div>
+            <br />
+            <table class="table-striped table-bordered span5 center-table">
+                <thead>
+                    <tr>
+                        <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            Nome
+                        </th>
+                        <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            Login
+                        </th>
+                        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            Tipo Usuário
+                        </th>
+                        <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            Administrador
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="usuario in model.listagem">
+                        <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <a href="#" ng-click="editar(usuario.Id)">{{ usuario.Nome }}</a>
+                        </td>
+                        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <a href="#" ng-click="editar(usuario.Id)">{{ usuario.Login }}</a>
+                        </td>
+                        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            <a href="#" ng-click="editar(usuario.Id)">{{ usuario.DescricaoTipo }}</a>
+                        </td>
+                        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            <a href="#" ng-click="editar(usuario.Id)">{{ usuario.HeAdministrador }}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
